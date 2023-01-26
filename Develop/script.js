@@ -1,25 +1,28 @@
+var today = dayjs();
+
 function displayTime(){
-  var today = dayjs();
+ 
   $('#currentDay').text(today.format('MMM D YYYY, h:mm:ss A'));
 
 };
 displayTime();
 setInterval(displayTime, 1000);
 
+var time =  $('#currentDay').text(today.format('h'));
 
 //let time = d.getHours();
 //
-//var timeBlock = $('.row time-block');
-//var timeId = timeBlock.children();
+var timeBlock = $('#timeblock');
+var timeId = $('section');
 //
-//if(timeId < time){//
-//  timeId.css({'background-color': '#d3d3d3', color: 'white'});
-//}else if(timeId === time){ 
-//    timeId.css({ 'background-color': '#ff6961', color: 'white'});
-//  } else{
-//    timeId.css({'background-color': '#77dd77',
-//      color: 'white'});
-//  };
+if(timeId < time){
+  timeId.css({'background-color': '#d3d3d3', color: 'white'});
+}else if(timeId === time){ 
+    timeId.css({ 'background-color': '#ff6961', color: 'white'});
+  } else{
+    timeId.css({'background-color': '#77dd77',
+      color: 'white'});
+  };
 
 
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
