@@ -6,3 +6,4 @@ the texts that is input into the textbox can be saved by the save button and can
 
 
 ![screenshot](https://user-images.githubusercontent.com/68488835/214978626-cbffcd33-9b42-47fe-9b09-21b4dae231c9.png)
+https://mitsushiro1.github.io/schedulemaker/
