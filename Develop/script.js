@@ -1,3 +1,5 @@
+//this shows the time
+
 var today = dayjs();
 var saveButton = $('#saveBtn');
 
@@ -12,11 +14,10 @@ setInterval(displayTime, 1000);
 var time = today.hour();
 
 
-//let time = d.getHours();
-//
 var timeBlock = $('#timeblock');
 var timeEl = $('section');
-//
+
+//this changes the color on each of the text boxes based off of time
 
 timeEl.each(function () {
 var timeId = $(this).attr('id')
@@ -32,6 +33,8 @@ var timeId = $(this).attr('id')
   };
 })
 
+//button would save the value that is input inside the textboxes
+
 $('.btn').on("click", function () {
   var task = $(this).siblings('.description').val()
   var key = $(this).attr('id')
@@ -42,11 +45,15 @@ $('.btn').on("click", function () {
 
 });
 
+//this would output the tasks saved previously
+
 function showTasks() {
   for(var i = 9; i < 18; i++) {
     var currentTask = localStorage.getItem(i)
     $("#text-"+ i).text(currentTask)
   }
 }
+
+// this just shows the output at the start of refreshing
 
 showTasks();
